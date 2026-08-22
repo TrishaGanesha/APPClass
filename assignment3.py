@@ -23,4 +23,4 @@ else:
 print("Consumer Category:", category)
 print("Units Consumed:", units)
 print("Rate per Unit:", rate)
-print("Electricity Bill: ₹", bill)
+print("Electricity Bill: ", bill)

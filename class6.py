@@ -1,69 +1,52 @@
-#students details using keyword arguments
-"""def student_details(name,age,course):
-    print(f"Name: {name}")
-    print(f"Age: {age}")
-    print(f"Course: {course}")
-student_details(name="John", age=20, course="Computer Science")  # Valid
-print("\n")
-student_details(course="Mathematics", name="Alice", age=22)  
+#when recursive will fail=stack overflow
+#to handle stack overflow,tradition appraoch=iteratively,tail recursion,dp(tabular)
+#(accumelator=track of variable)no need of stack but use variable =tail recursion
+#recursive tree (ada=masters ,substituion,recursive tree,brute froce)
 
-#variable length Keyword argument
-def student_details(**details):
-    for key,value in details.items():
-        print(key,":",value)
-student_details(name='Rahul',age=21,course="MCA",semester=2)
 
-#students details using both *args and **kwargs
-def student(*subjects,**details):
-    print("Subject:")
-    for subject in subjects:
-        print("-",subject)
-    print("\nStudent Details:")
-    for key,value in details.items():
-        print(key,":",value)
-student("Python","Sql","CV",name="Rahul",semester=2)
-
-#Return Values
-#when a function reaches a return statement,it stops executing and sends the result
-#Return multiple values
-#return multiple values
-#DIFF between print() and return()
-def add_return(a,b):
-    return a+b
-def add_print(a,b):
-    print(a+b)
-add_print(100,30)
-print((add_return(20,30)))
-result=add_print(30,20)
-print(result)
-#Returning multiple values
-#dynamic insertion of marks with given number of input of n"""
-def result(*marks):
-    total=sum(marks)
-    percentage=total/len(marks)
-    return total,percentage
-total,percentage=result(85,43,78,99)
-print("Total",total)
-print("Percentage",percentage)
-
-#Scope of variable 
-#local and global variable example
-#global keyword in fornt of a variable name ,when used inside in function ,then also it will be global but not local
-
-balance=1000
-def deposit(amount):
-    global balance
-    balance+=amount
-deposit(500)
-print("Balance=",balance)
-
-#RECURSION
-#factorail of a number using recursive
-def factorial(n):
+#tail recurisve call is the last thing the function does
+#factorial using tail recursive
+"""def factorial(n):
     if n==0 or n== 1:
         return 1
     else:
         return n*factorial(n-1)
-value=factorial(8)
+value=factorial(5)
 print(value)
+def factorial(n,result=1):
+    if n==0:
+        return result
+    return factorial(n-1,result*n)
+print(factorial(5))
 
+def factorial(n,result=1):
+    print(n,result)
+    if n==0:
+        return result
+    return factorial(n-1,result*n)
+print(factorial(5))
+#sum of n numbers using tail recursion
+def sum_num(n,result=0):
+    print(n,result)
+    if n==0:
+        return result
+    return sum_num(n-1,result+n)
+print(sum_num(5))"""
+
+#fibonacci using tail recursion
+def fibonacci(n,a=0,b=1):
+    print(n,a,b)#to print tree
+    if n==0 :
+        return a
+    return fibonacci(n-1,b,a+b)
+print(fibonacci(5))
+for i in range(3):
+    print(fibonacci(i),end=" ")
+#python does not perform tail call optimization so iterative solution is used for large computation
+#Tail Recursion vs Normal Recursion
+#Feature                            Normal Recursion                           Tail Recursion
+#Recursion call                     not necessarily last                         last operation
+#Pending Operation                  Yes                                          no
+#use accumulator                    Usually no                                   often yes
+#Tail call optimization in python    no                                           no
+#stack limitation                    yes                                          still yes in python
