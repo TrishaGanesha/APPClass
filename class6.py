@@ -6,7 +6,7 @@
 
 #tail recurisve call is the last thing the function does
 #factorial using tail recursive
-"""def factorial(n):
+def factorial(n):
     if n==0 or n== 1:
         return 1
     else:
@@ -31,7 +31,7 @@ def sum_num(n,result=0):
     if n==0:
         return result
     return sum_num(n-1,result+n)
-print(sum_num(5))"""
+print(sum_num(5))
 
 #fibonacci using tail recursion
 def fibonacci(n,a=0,b=1):
