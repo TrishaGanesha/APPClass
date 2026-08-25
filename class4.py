@@ -4,7 +4,7 @@
 #Positional only arguments=you can specify that some parameters must be specified positionally. This is done by placing a / in the function definition. All parameters before the / must be specified positionally.
 #example 
 """function arguments types default arguments, keyword arguments, variable-length arguments, positional-only arguments, and keyword-only arguments."""
-"""def greet(name, /):
+def greet(name, /):
     print(f"Hello, {name}!")
 c=greet("Alice")  # Valid
 #Function with positional arguments
@@ -16,7 +16,7 @@ def func(a,b):
 c=func(10,2)
 print(c) 
 d=func(10,0)
-print(d)  """
+print(d)  
 #variable-length arguments=when no fixed number of arguments are specified, the function can accept any number of arguments. These are called variable-length arguments. In Python, you can use *args for variable-length positional arguments and **kwargs for variable-length keyword arguments.
 #example
 def calculate_sum(*args):

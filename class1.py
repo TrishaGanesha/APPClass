@@ -1,7 +1,7 @@
 #When to use shorthand coniditon
 #to code readable ,simple,qucik assignment based on condition
 #short hand if
-"""n=int(input("enter the age"))
+n=int(input("enter the age"))
 if n>=18:print("eligible to vote")
 #short hand if else
 marks=int(input("enter the marks"))
@@ -47,7 +47,7 @@ while(i<n):
     i+=1
 n="hello"
 for i in reversed(range(len(n))):
-    print(n[i])"""
+    print(n[i])
 #sort is used for list type of data type ,sorted is used for other data type
 
 

@@ -1,5 +1,5 @@
 #students details using keyword arguments
-"""def student_details(name,age,course):
+def student_details(name,age,course):
     print(f"Name: {name}")
     print(f"Age: {age}")
     print(f"Course: {course}")
@@ -37,7 +37,7 @@ print((add_return(20,30)))
 result=add_print(30,20)
 print(result)
 #Returning multiple values
-#dynamic insertion of marks with given number of input of n"""
+#dynamic insertion of marks with given number of input of n
 def result(*marks):
     total=sum(marks)
     percentage=total/len(marks)
@@ -50,12 +50,12 @@ print("Percentage",percentage)
 #local and global variable example
 #global keyword in fornt of a variable name ,when used inside in function ,then also it will be global but not local
 
-""""balance=1000
+balance=1000
 def deposit(amount):
     global balance
     balance+=amount
 deposit(500)
-print("Balance=",balance)"""
+print("Balance=",balance)
 
 #RECURSION
 #factorail of a number using recursive

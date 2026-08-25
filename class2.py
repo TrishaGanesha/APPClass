@@ -1,4 +1,4 @@
-"""arr=list(map(int,input("enter the numbers").split()))
+arr=list(map(int,input("enter the numbers").split()))
 for i in range(len(arr)):
     for j in range(len(arr)-1):
         if arr[j]>arr[j+1]:
@@ -64,7 +64,7 @@ for i in range(1,5):
         print(" ",end=" ")
     for k in range(1,i+1):
         print("*",end=" ")
-    print()"""
+    print()
 def print_pyramid(rows: int) -> None:
     for i in range(1, rows + 1):
         print(" " * (rows - i) + "* " * i)
