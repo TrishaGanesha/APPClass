@@ -51,7 +51,7 @@ from Calculator import add,sub,multiply,divide
 print(add(6,7))
 print(sub(6,7))
 print(multiply(6,7))
-print(multiply(36,6))
+print(divide(36,6))
 
 
 
