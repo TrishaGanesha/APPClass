@@ -10,7 +10,7 @@
 
 
 #create/Open a File
-"""file=open("students.txt","w")
+file=open("students.txt","w")
 print("File opened successfully")
 file.close()
 
@@ -59,7 +59,7 @@ file=open("students.txt","r")
 print(file.readline())
 print(file.readline())
 print(file.readline())
-file.close()"""
+file.close()
 
 #Reading all lines using readlines()
 file=open("students.txt","r")
