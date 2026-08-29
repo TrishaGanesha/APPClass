@@ -28,4 +28,44 @@ with open("students.txt","a") as file:
     name=input("enter new student name:")
     file.write(name+"\n")
 print("student added successfully")
-print("File closed:",file.closed)"""
+print("File closed:",file.closed)
+
+
+#Counting Lines,Words, and Characters in a file  
+with open("students.txt","r") as file:
+    content=file.read()
+lines=content.splitlines()
+words=content.split()
+characters=len(content)
+print("number of lines:",len(lines))
+print("number of words:",len(words))
+print("number of characters",characters)
+
+#without built do
+with open("students.txt","r") as file:
+    content=file.read()
+
+
+#The file pointer tell() indicate the current position in the file
+with open("students.txt","r") as file:
+    print("Initial position:",file.tell())
+    print(file.read(5))
+    print("Position after reading",file.tell())
+
+#for other operation
+with open("students.txt","a") as file:
+    print("Initial position:",file.tell())
+    print(file.read(2))
+    print("Position after reading",file.tell())
+#seek() moves the file pointer to a specific position
+with open("students.txt","r") as file:
+    print(file.read(10))
+    print("Position before seeking:",file.tell())
+    file.seek(5)
+    print("Position after seeking:",file.tell())
+    print(file.read(6))#from 5 read 6 character"""
+
+#an MCA department wants to store students information such as
+#roll number,name,course,marks
+#write,read,search for paticular information ,change year as pormoted 1st to 2nd year(save as 1st year to 2nd year rename the file,creating as duplicate file),delete first year students detail
+
