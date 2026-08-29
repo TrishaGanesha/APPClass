@@ -68,8 +68,28 @@ print(lines)
 file.close()
 
 #read specific number of lines,or statisfy a certain condition(read only verbs in statement) with loop 
+file=open("students.txt","r")
+for line in file:
+    print(line.strip())
+file.close()
 
 
 
+
+#mode      Read methods           write methods
+# r           read()                   write()
+# w           readline()               writelines()
+# a           readlines()           
+# r+
+# w+
+
+#methods
+# open()
+# read()
+# write()
+# close()
+#seek() 
+#tell()   #diff seek and tell(returns to current pointer position,default tell returns to=last position(for w),to first position(for r))
+#
 
 
