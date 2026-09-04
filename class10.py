@@ -2,6 +2,14 @@
 #Student file marks record
 #Marks can be a list numeric data for 100 marks marks=[25,35,90,"AB",87,"NAme"]
 #updated marks=[25,35,90,87]
+# with open("students.txt", "r") as file:
+#     for line in file:
+#        try:
+#            marks=int(line.strip().split(","))
+#            if marks<0 or marks>100:
+#                raise ValueError("Marks must be between 0 and 100" \)
+               
+
 """try:
     #marks=[25,35,90,"87","NAme"]
     marks=list(input("Enter marks separated by space: ").split())
@@ -37,6 +45,37 @@ for i in range(n):
         continue
 
 print("updated marks list", updated_marks)"""
-# git init
-# git add .
-# git commit -m "class9"
+
+#Banking application widthdrawal is negative,deposit is 0 raise exception
+balance=1000
+deposit=int(input("Enter amount to deposit: "))
+try:
+    if deposit<=0:
+        raise ValueError("Deposit amount must be greater than zero")
+except ValueError as e:
+    print("Error:", e)
+else:
+    balance += deposit
+    print("Deposit successful. New balance:", balance)
+try:
+    amount=int(input("Enter amount to withdraw: "))
+    if amount<0:
+        raise ValueError("Withdrawal amount cannot be negative")
+    elif amount>balance:
+        raise ValueError("Insufficient balance")
+    else:
+        balance-=amount
+        print("Withdrawal successful. New balance:", balance)
+except ValueError as e:
+    print("Error:", e)
+# student name cannot be empty
+# marks must be numeric
+# marks must be between 0 and 100
+# invalid marks using user defined exception
+# valid student record store in file
+# user should be allowed to enter multiple student using a loop
+
+#temp info if user enter the non numeric raise a error 
+#info using array only one type of data type
+
+
