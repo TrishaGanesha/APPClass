@@ -66,6 +66,6 @@ import pdb
 marks=[90,87,76]
 total=sum(marks)
 # breakpoint()  # Set a breakpoint here
-pdb.set_trace()
+pdb.set_trace()#placing of tracing is also important to identify the error in the code,if placed at the end of the code it will not help to identify the error in the code
 average=total/len(marks)
 print("Average marks:",average)
