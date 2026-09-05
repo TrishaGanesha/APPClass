@@ -15,7 +15,7 @@
 #debugging is essential programming skill because:incorrect program logic,invalid user input,runtime exceptions,incorrect data types,unhandled exceptions,logical errors,function call errors,file and resource issues
 # 1.Assertion 
 # syntax: assert condition, "error message"
-"""assert 5 > 3, "5 is not greater than 3
+assert 5 > 3, "5 is not greater than 3"
 def calculate_average(numbers):
     assert len(numbers)> 0, "The list of numbers cannot be empty"
     return sum(numbers) / len(numbers)
@@ -60,7 +60,7 @@ logging.debug("Program completed")
 # p            print the value of a variable or expression
 # l            show surrounding lines of code for context
 # q            quit the debugger and exit the program
-# w            display the current call stack to see the sequence of function calls leading to the current point in execution"""
+# w            display the current call stack to see the sequence of function calls leading to the current point in execution
 
 import pdb
 marks=[90,87,76]
