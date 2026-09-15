@@ -13,17 +13,25 @@ ns is green ew is red (program should automitacilly change the light colour - if
 
 
    
-market_2d={'ns': 'green','ew':'red'}
-def switchlights(stoplight):
-    for key in stoplight.keys():
-        if stoplight[key] == ' green':
-            stoplight[key]= 'yellow'
-        elif stoplight[key] == 'yellow':
-            stoplight[key]='red'
-        elif stoplight[key] == 'red':
-            stoplight[key]='green'
+market_street = {'ns': 'green', 'ew': 'red'}
 
-    assert 'red' in stoplight.values(),\
-        'neither light is red!' + str(Stoplight)
-switchlights(market_2d)
-print("triffic signals :",market_2d)
+def switch_lights(stoplight):
+
+    for key in stoplight:
+        if stoplight[key] == 'green':
+            stoplight[key] = 'yellow'
+
+        elif stoplight[key] == 'yellow':
+            stoplight[key] = 'red'
+
+        elif stoplight[key] == 'red':
+            stoplight[key] = 'green'
+
+    # Correctness check
+    assert 'red' in stoplight.values(), \
+        "Neither light is red! " + str(stoplight)
+
+
+switch_lights(market_street)
+
+print("Traffic signals:", market_street)

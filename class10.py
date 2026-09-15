@@ -10,41 +10,41 @@
 #                raise ValueError("Marks must be between 0 and 100" \)
                
 
-"""try:
-    #marks=[25,35,90,"87","NAme"]
-    marks=list(input("Enter marks separated by space: ").split())
-    updated_marks=[]
-    for mark in marks:
-        updated_marks.append(int(mark))
-    print("Updated Marks:",updated_marks)
-except ValueError as e:
-    print("Error occurred while converting marks to integer:", e)
-    print("updated marks",updated_marks)
+# try:
+#     marks=[25,35,90,"87","NAme"]
+#     #marks=list(input("Enter marks separated by space: ").split())
+#     updated_marks=[]
+#     for mark in marks:
+#         updated_marks.append(int(mark))
+#     print("Updated Marks:",updated_marks)
+# except ValueError as e:
+#     print("Error occurred while converting marks to integer:", e)
+#     print("updated marks",updated_marks)
 
 marks = input("Enter marks separated by space: ").split()
 
-updated_marks = []
+# updated_marks = []
 
-for mark in marks:
-    try:
-        updated_marks.append(int(mark))
-    except ValueError as e:
-        print(f"Error occurred while converting '{mark}' to integer: {e}")
-        continue
+# for mark in marks:
+#     try:
+#         updated_marks.append(int(mark))
+#     except ValueError as e:
+#         print(f"Error occurred while converting '{mark}' to integer: {e}")
+#         continue
 
-print("Numeric marks:", updated_marks)
+# print("Numeric marks:", updated_marks)
 
-n=int(input("Enter number of students: "))
-updated_marks=[]
-for i in range(n):
-    mark=input("Enter marks: ")
-    try:
-        updated_marks.append(int(mark))
-    except ValueError as e:
-        print(f"Error occurred while converting '{mark}' to integer: {e}")
-        continue
+# n=int(input("Enter number of students: "))
+# updated_marks=[]
+# for i in range(n):
+#     mark=input("Enter marks: ")
+#     try:
+#         updated_marks.append(int(mark))
+#     except ValueError as e:
+#         print(f"Error occurred while converting '{mark}' to integer: {e}")
+#         continue
 
-print("updated marks list", updated_marks)"""
+# print("updated marks list", updated_marks)
 
 #Banking application widthdrawal is negative,deposit is 0 raise exception
 balance=1000
@@ -68,14 +68,14 @@ try:
         print("Withdrawal successful. New balance:", balance)
 except ValueError as e:
     print("Error:", e)
-# student name cannot be empty
-# marks must be numeric
-# marks must be between 0 and 100
-# invalid marks using user defined exception
-# valid student record store in file
-# user should be allowed to enter multiple student using a loop
+# # student name cannot be empty
+# # marks must be numeric
+# # marks must be between 0 and 100
+# # invalid marks using user defined exception
+# # valid student record store in file
+# # user should be allowed to enter multiple student using a loop
 
-#temp info if user enter the non numeric raise a error 
-#info using array only one type of data type
+# #temp info if user enter the non numeric raise a error 
+# #info using array only one type of data type
 
 

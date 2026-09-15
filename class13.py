@@ -2,7 +2,7 @@
 #not static method should have self as first argument
 #an online food delivey application
 #creates an order using customer name,food item and quantity
-"""class FoodOrder:
+class FoodOrder:
     def __init__(self,customer_name,food_item,quantity):  #Parameterized constructor
         self.customer_name=customer_name
         self.food_item=food_item
@@ -16,7 +16,7 @@ print("Quantity:",order1.quantity)
 
 print("Customer Name:"+order2.customer_name)
 print("Food Item:"+order2.food_item)
-print("Quantity:"+str(order2.quantity))"""
+print("Quantity:"+str(order2.quantity))
 
 
 #instance variable = variables that are defined inside the constructor and are unique to each object of the class

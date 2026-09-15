@@ -14,7 +14,7 @@
 #tell()   #diff seek and tell(returns to current pointer position,default tell returns to=last position(for w),to first position(for r))
 
 #different methods to inspect file properties:
-file=open("students.txt","r+")
+"""file=open("students.txt","r+")
 readcontent=file.read()
 file.write("\nThank you")
 print("Read Content:\n",readcontent)
@@ -55,7 +55,7 @@ with open("students.txt","r") as file:
 #for other operation
 with open("students.txt","a") as file:
     print("Initial position:",file.tell())
-    print(file.read(2))
+    print(file.read(0))
     print("Position after reading",file.tell())
 #seek() moves the file pointer to a specific position
 with open("students.txt","r") as file:
@@ -103,3 +103,84 @@ def search_student():
                 return
 
     print("Student not found")
+add_student()
+search_student()"""
+
+
+import os
+
+# 1. WRITE student details
+f = open("1st_year.txt", "w")
+
+n = int(input("Enter number of students: "))
+
+for i in range(n):
+    roll = input("Roll No: ")
+    name = input("Name: ")
+    course = input("Course: ")
+    marks = input("Marks: ")
+
+    f.write(f"{roll},{name},{course},{marks}\n")
+
+f.close()
+print("Student details saved.")
+
+
+# 2. READ student details
+f = open("1st_year.txt", "r")
+
+print("\nStudent Details:")
+print(f.read())
+
+f.close()
+
+
+# 3. SEARCH particular student
+roll = input("Enter roll number to search: ")
+
+f = open("1st_year.txt", "r")
+found = False
+
+for line in f:
+    data = line.strip().split(",")
+
+    if data[0] == roll:
+        print("Student Found:")
+        print("Roll No:", data[0])
+        print("Name:", data[1])
+        print("Course:", data[2])
+        print("Marks:", data[3])
+        found = True
+
+f.close()
+
+if not found:
+    print("Student not found.")
+
+
+# 4. PROMOTE 1st year → 2nd year
+# Creates a duplicate file first
+f1 = open("1st_year.txt", "r")
+f2 = open("2nd_year.txt", "w")
+
+for line in f1:
+    f2.write(line)
+
+f1.close()
+f2.close()
+
+print("Students promoted to 2nd year.")
+
+
+# 5. Delete 1st year file
+os.remove("1st_year.txt")
+print("1st year file deleted.")
+
+
+# 6. Create and delete folder
+os.mkdir("MCA_Students")
+
+# Folder must be empty before rmdir
+os.rmdir("MCA_Students")
+
+print("Folder deleted.")

@@ -15,15 +15,15 @@
 #debugging is essential programming skill because:incorrect program logic,invalid user input,runtime exceptions,incorrect data types,unhandled exceptions,logical errors,function call errors,file and resource issues
 # 1.Assertion 
 # syntax: assert condition, "error message"
-assert 5 > 3, "5 is not greater than 3"
-def calculate_average(numbers):
-    assert len(numbers)> 0, "The list of numbers cannot be empty"
-    return sum(numbers) / len(numbers)
-numbers = [10, 20, 30]
-average = calculate_average(numbers)
-print("Average:", average)
-avg=[]
-print("Average of empty list:", calculate_average(avg))  # This will raise an AssertionError
+# assert 5 > 3, "5 is not greater than 3"
+# def calculate_average(numbers):
+#     assert len(numbers)> 0, "The list of numbers cannot be empty"
+#     return sum(numbers) / len(numbers)
+# numbers = [10, 20, 30]
+# average = calculate_average(numbers)
+# print("Average:", average)
+# avg=[]
+# print("Average of empty list:", calculate_average(avg))  # This will raise an AssertionError
 
 #2.Exception handling is a mechanism in programming languages to handle runtime errors gracefully, allowing the program to continue executing or provide meaningful error messages instead of crashing. It involves using try-except blocks to catch and handle exceptions that may occur during program execution.
 
@@ -36,31 +36,31 @@ print("Average of empty list:", calculate_average(avg))  # This will raise an As
 #WARNING     An indication that something unexpected happened, or indicative of some problem in the near future (e.g., ‘disk space low’). The software is still working as expected.
 #ERROR       Due to a more serious problem, the software has not been able to perform some function.indicates that an error occured
 #critical    indicates a serious failure
-import logging
-logging.basicConfig(level=logging.DEBUG, format=' %(levelname)s - %(message)s')
-logging.debug("Program started")
-age=int(input("Enter your age: "))
-logging.info(f"Age entered:{age}")
-if age<18:
-    logging.warning("User is not eligible for the service.")
-logging.debug("Program completed")
+# import logging
+# logging.basicConfig(level=logging.DEBUG, format=' %(levelname)s - %(message)s')
+# logging.debug("Program started")
+# age=int(input("Enter your age: "))
+# logging.info(f"Age entered:{age}")
+# if age<18:
+#     logging.warning("User is not eligible for the service.")
+# logging.debug("Program completed")
 
-#python debugger (pdb) is a built-in module that allows developers to set breakpoints, step through code, inspect variables, and evaluate expressions interactively. It helps identify and fix bugs by providing a controlled environment for debugging.
-# it allows the programmer to:
-# pause program execution
-# execute the program step by step
-# inspect variable values 
-# check program flow
-# identify logical errors
+# #python debugger (pdb) is a built-in module that allows developers to set breakpoints, step through code, inspect variables, and evaluate expressions interactively. It helps identify and fix bugs by providing a controlled environment for debugging.
+# # it allows the programmer to:
+# # pause program execution
+# # execute the program step by step
+# # inspect variable values 
+# # check program flow
+# # identify logical errors
 
-# commands     meaning
-# n            execute the next line of code
-#s            step into a function call
-# c            continue execution until the next breakpoint
-# p            print the value of a variable or expression
-# l            show surrounding lines of code for context
-# q            quit the debugger and exit the program
-# w            display the current call stack to see the sequence of function calls leading to the current point in execution
+# # commands     meaning
+# # n            execute the next line of code
+# #s            step into a function call
+# # c            continue execution until the next breakpoint
+# # p            print the value of a variable or expression
+# # l            show surrounding lines of code for context
+# # q            quit the debugger and exit the program
+# # w            display the current call stack to see the sequence of function calls leading to the current point in execution
 
 import pdb
 marks=[90,87,76]
