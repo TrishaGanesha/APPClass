@@ -179,14 +179,14 @@ print("Combined Investment:",total)
 
 
 #multiple class
-class student:
-    def __init__(self,name,marks):
-        self.name=name
-        self.marks=marks
-    def display(self):
-        print()
-class bonusmarks:
-
+# class student:
+#     def __init__(self,name,marks):
+#         self.name=name
+#         self.marks=marks
+#     def display(self):
+#         print()
+# class bonusmarks:
+# 
 
 
 
@@ -198,6 +198,6 @@ class bonusmarks:
 #inheritance 5type
 #single inheritance ,object must be created for child class ,and access parent using child class
 #multilevel inheritance=one parent class,derived class is derived class from parent class which will be a derived class of other class
-#multiple =one child has multiple parent class
+#multiple =one child has multiple parent class,check once
 #hybrid combinations
 #hierarchical one parent multiple children class
